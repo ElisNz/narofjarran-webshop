@@ -22,7 +22,7 @@
 								</RouterLink>
 							</div>
 							<div class="col-5">
-								<button class="btn btn-success" @click="cartStore.addItems(product)">Buy Now</button>
+								<button class="btn btn-success" @click="cartStore.addItems(product as Product)">Buy Now</button>
 							</div>
 							<div class="col-4">
 								<h5 class="card-text">${{ product?.price }}</h5>
@@ -48,6 +48,7 @@ import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { useProductStore } from '../stores/ProductStore'
 import { useCartStore } from '../stores/CartStore';
+import Product from '@/types/Product';
 
 export default defineComponent({
 	emits: ['addToCart'],
