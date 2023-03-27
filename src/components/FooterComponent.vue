@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid">
+	<div class="container-fluid mt-5 p-3 bg-light border-top">
 		<div class="row">
 			<div class="col">
 				<p class="text-center">Created by Johan Hellberg 2023. Website, <a href="https://jhellberg.com"
