@@ -55,7 +55,7 @@ export default defineComponent({
 
 		// sorting function to sort according to id, title and price
 		const orderedProducts = computed(() => {
-			return [...productStore.filteredProducts].sort((a: Product, b: Product) => {
+			return [...productStore.filter].sort((a: Product, b: Product) => {
 				return a[props.order] > b[props.order] ? 1 : -1
 			})
 		})
