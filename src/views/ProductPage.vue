@@ -57,7 +57,7 @@ export default defineComponent({
 		const productStore = useProductStore();
 		const cartStore = useCartStore();
 
-		const product = productStore.filteredProducts.find(product => product.id === parseInt(route.params.id))
+		const product = productStore.filteredProducts.find(product => product.id === parseInt(route.params.id as string))
 
 		return { useProductStore, cartStore, product }
 	},
