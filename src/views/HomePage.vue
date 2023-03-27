@@ -37,6 +37,7 @@ export default defineComponent({
   setup() {
     const productStore = useProductStore();
     productStore.fill();
+    productStore.filter;
 
     const orderProduct = ref<OrderTermProducts>('id')
     const handleClickProducts = (term: OrderTermProducts) => {
