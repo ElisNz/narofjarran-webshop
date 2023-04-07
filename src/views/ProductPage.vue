@@ -97,7 +97,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import { useProductStore } from '../stores/ProductStore'
 import { useCartStore } from '../stores/CartStore'
@@ -110,7 +110,7 @@ export default defineComponent({
     const productStore = useProductStore()
     const cartStore = useCartStore()
 
-    const product = productStore.filteredProducts.find(
+    const product = productStore.products.find(
       (product) => product.id === parseInt(route.params.id as string)
     )
 
