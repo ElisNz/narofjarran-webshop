@@ -63,11 +63,9 @@
                 <div
                   class="d-flex justify-content-center small text-warning mb-2"
                 >
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill">
+                    Product review, {{ product?.rating.rate }}
+                  </div>
                 </div>
                 <!-- Product price-->
                 ${{ product?.price }}
@@ -76,6 +74,12 @@
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
+                <!-- Link to product page -->
+                <!-- <RouterLink :to="`/product/${product.id}`">
+                  <button class="btn btn-primary">
+                    <i class="fa-solid fa-circle-info fa-xl"></i>
+                  </button>
+                </RouterLink> -->
                 <button
                   class="btn btn-outline-dark mt-auto"
                   @click="cartStore.addItems(product as Product)"
