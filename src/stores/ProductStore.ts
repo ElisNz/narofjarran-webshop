@@ -16,12 +16,6 @@ export const useProductStore = defineStore('ProductStore', {
         .then((response) => (this.products = response.data))
         .catch((error) => console.log(error))
     },
-    search(searchQuery: string) {
-      if (searchQuery === '') return (this.filteredProducts = this.products)
-      this.filteredProducts = this.products.filter((product) => {
-        return product.title.toLowerCase().includes(searchQuery.toLowerCase())
-      })
-    },
   },
   getters: {
     filter({ products }) {
