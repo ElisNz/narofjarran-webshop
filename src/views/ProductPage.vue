@@ -37,16 +37,14 @@
 
   <!-- Related items section-->
   <section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 mt-5">
+    <div class="container">
       <h2 class="fw-bolder mb-4">Related products</h2>
       <div
-        class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+        class="row justify-content-center"
+        v-for="product in similairProducts"
+        :key="product.id"
       >
-        <div
-          class="col mb-5"
-          v-for="product in similairProducts"
-          :key="product.id"
-        >
+        <div class="col mb-4">
           <div class="card h-100">
             <!-- Product image-->
             <img
@@ -115,7 +113,9 @@ export default defineComponent({
     )
 
     const similairProducts = productStore.filter.filter(
-      (products) => products.category === product?.category
+      (products) =>
+        products.category === product?.category &&
+        products.id !== parseInt(route.params.id as string)
     )
 
     return { useProductStore, cartStore, product, similairProducts }
