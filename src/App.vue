@@ -1,7 +1,6 @@
 <template>
   <div class="app">
     <NavBar />
-    <SearchBar />
 
     <router-view></router-view>
 
@@ -10,18 +9,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import NavBar from './components/NavBar.vue';
-import SearchBar from './components/SearchBar.vue'
-import FooterComponent from './components/FooterComponent.vue';
+import { defineComponent } from 'vue'
+import NavBar from './components/NavBar.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default defineComponent({
   name: 'App',
-  components: { NavBar, FooterComponent, SearchBar },
-  setup() { },
+  components: { NavBar, FooterComponent },
 })
 </script>
-
 
 <style scoped>
 /* Colors */
