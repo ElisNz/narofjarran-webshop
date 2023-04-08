@@ -1,4 +1,5 @@
 <template>
+  <!-- search-bar -->
   <header class="py-3 mb-1 border-bottom">
     <div class="container d-flex flex-wrap justify-content-center">
       <div class="row">
@@ -16,11 +17,12 @@
     </div>
   </header>
 
+  <!-- product list -->
   <div class="container-lg">
     <div class="row">
       <p>Ordered by {{ order }}</p>
       <div
-        class="col-sm-6 col-lg-4 col-xl-3 g-2"
+        class="d-flex justify-content-center col-sm-6 col-lg-4 col-xl-3 g-2 mb-3"
         v-for="product in searchedProducts"
         :key="product.id"
       >
@@ -76,6 +78,9 @@ export default defineComponent({
       type: String as PropType<OrderTermProducts>,
       required: true,
     },
+    // searchQuery: {
+    //   type: String,
+    // },
   },
   setup(props) {
     const count = ref(0)
