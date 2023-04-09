@@ -39,13 +39,13 @@
   <section class="py-5 bg-light">
     <div class="container">
       <h2 class="fw-bolder mb-4">Related products</h2>
-      <div
-        class="row justify-content-center"
-        v-for="product in similairProducts"
-        :key="product.id"
-      >
-        <div class="col mb-4">
-          <div class="card h-100">
+      <div class="row">
+        <div
+          class="d-flex col-sm-6 col-lg-4 col-xl-3 g-2 mb-4 justify-content-center"
+          v-for="product in similairProducts"
+          :key="product.id"
+        >
+          <div class="card h-100" style="width: 18rem">
             <!-- Product image-->
             <img
               class="card-img-top"
