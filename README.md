@@ -6,6 +6,7 @@
 - TypeScript
 - Pinia
 - Bootstrap
+- FakeStore API
 
 
 ## Homescreen
