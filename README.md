@@ -3,8 +3,8 @@
 
 ## Webshop built with:
 - Vue
-- Pinia
 - TypeScript
+- Pinia
 - Bootstrap
 
 
