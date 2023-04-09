@@ -2,7 +2,11 @@
   <div class="app">
     <NavBar />
 
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
 
     <FooterComponent />
   </div>
@@ -30,4 +34,13 @@ Spearmint
 #B6E2D3
 Rosewater
 #D8A7B1 */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
