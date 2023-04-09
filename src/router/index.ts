@@ -1,20 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/HomePage.vue'
-import About from '../views/AboutPage.vue'
-import Product from '../views/ProductPage.vue'
-import NotFound from '../views/PageNotFound.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/about', name: 'About', component: About },
+  { path: '/', name: 'Home', component: () => import('../views/HomePage.vue') },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/AboutPage.vue'),
+  },
   { path: '/info', redirect: '/about' },
-  { path: '/product/:id', name: 'Product', component: Product },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  {
+    path: '/product/:id',
+    name: 'Product',
+    component: () => import('../views/ProductPage.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/PageNotFound.vue'),
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return savedPosition || { top: 0 }
+  },
 })
 
 export default router
