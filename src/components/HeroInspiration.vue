@@ -35,21 +35,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* div {
-		color: black;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-around;
-		height: 40vh;
-		width: 100vw;
-		background-color: #B6E2D3;
-	}
-	h3 {
-		text-align: center;
-	}
-	img {
-	width: 300px;
-	height: 150px;
-} */
 </style>
