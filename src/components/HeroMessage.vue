@@ -47,32 +47,4 @@ export default defineComponent({
   color: white;
 }
 
-/* div {
-	color: white;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 40vh;
-	width: 100vw;
-	background-color: #EF7C8E;
-}
-
-h3 {
-	text-align: center;
-}
-
-img {
-	width: 300px;
-	height: 150px;
-} */
-
-/* button {
-	margin: .5rem;
-	padding: .5rem 1rem;
-	border-radius: .5rem;
-	border-style: none;
-	background-color: antiquewhite;
-	font-weight: 700;
-} */
 </style>
